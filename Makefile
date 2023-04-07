@@ -1,10 +1,10 @@
-# Makefile to build libmus
+# Makefile to build libultra
 
 include util.mk
 
 # Preprocessor definitions
 
-DEFINES :=
+DEFINES =
 
 SRC_DIRS :=
 
@@ -63,7 +63,7 @@ O_FILES := $(foreach file,$(C_FILES),$(BUILD_DIR)/$(file:.c=.o)) \
            $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file:.s=.o))
 
 # Automatic dependency files
-DEP_FILES := $(O_FILES:.o=.d) $(ASM_O_FILES:.o=.d)
+DEP_FILES := $(O_FILES:.o=.d)
 
 #==============================================================================#
 # Compiler Options                                                             #
@@ -136,8 +136,7 @@ $(BUILD_DIR)/src/monegi/sprite/spriteex2.o: GBIDEFINE =
 # Compile C code
 $(BUILD_DIR)/src/nintendo/voice/%.o: src/nintendo/voice/%.c
 	$(call print,Compiling:,$<,$@)
-	$(V)tools/compile_sjis.py -D__CC=$(CC) -D__BUILD_DIR=$(BUILD_DIR) -c $(CFLAGS)  -D_LANGUAGE_C -Isrc -Isrc/nintendo/voice -MMD -MF $(BUILD_DIR)/src/nintendo/voice/$*.d  -o $@ $<
-#	$(V)$(CC) -c $(CFLAGS) -MMD -MF $(BUILD_DIR)/$*.d  -o $@ $<
+	$(V)tools/compile_sjis.py -D__CC=$(CC) -D__BUILD_DIR=$(BUILD_DIR) -c $(CFLAGS) -D_LANGUAGE_C -MMD -MF $(BUILD_DIR)/src/nintendo/voice/$*.d  -o $@ $<
 
 $(BUILD_DIR)/%.o: %.c
 	$(call print,Compiling:,$<,$@)
