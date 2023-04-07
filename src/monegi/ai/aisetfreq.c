@@ -2,9 +2,6 @@
 #include "PR/ultraerror.h"
 #include "osint.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 s32 osAiSetFrequency(u32 frequency) {
     register unsigned int dacRate;
     register unsigned char bitRate;

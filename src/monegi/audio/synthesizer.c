@@ -18,9 +18,6 @@
 #include "synthInternals.h"
 #include <assert.h>
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 #ifdef AUD_PROFILE
 #include <os.h>
 extern u32 cnt_index, drvr_num, drvr_cnt, drvr_max, drvr_min, lastCnt[];

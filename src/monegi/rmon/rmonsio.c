@@ -12,9 +12,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 static OSMesgQueue IOmq ALIGNED(8);
 static OSMesg IOmsgs;
 

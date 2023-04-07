@@ -2,9 +2,6 @@
 #include "PR/rcp.h"
 #include "viint.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 void __osViSwapContext() {
     register OSViMode* vm;
     register __OSViContext* vc;

@@ -7,9 +7,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 OSMesgQueue __rmonMQ ALIGNED(8);
 
 int __rmonSetFault(KKHeader* req) {

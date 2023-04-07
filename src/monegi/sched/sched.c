@@ -18,8 +18,6 @@
 #include <ultralog.h>
 #include <assert.h>
 #include <sched.h>
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
 
 /*
  * private typedefs and defines

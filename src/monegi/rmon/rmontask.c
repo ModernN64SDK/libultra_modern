@@ -8,9 +8,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 void __rmonMaskIdleThreadInts(void) {
     register OSThread* tptr = __osGetActiveQueue();
 

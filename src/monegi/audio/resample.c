@@ -23,9 +23,6 @@
 #include <os.h>
 #include <stdio.h>
 
-// TODO: this comes from a header
-#ident "$Revision: 1.49 $"
-
 #ifdef AUD_PROFILE
 extern u32 cnt_index, resampler_num, resampler_cnt, resampler_max, resampler_min, lastCnt[];
 #endif

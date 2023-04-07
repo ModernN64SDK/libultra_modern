@@ -9,9 +9,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 u8 __rmonUtilityBuffer[256] ALIGNED(8);
 
 void __rmonWriteWordTo(u32* addr, u32 val) {

@@ -9,9 +9,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 int __rmonActive = FALSE;
 
 static vu32 somethingToDo;

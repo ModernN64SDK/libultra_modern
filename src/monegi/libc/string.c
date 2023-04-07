@@ -1,9 +1,6 @@
 #include "PR/ultratypes.h"
 #include "string.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.23 $"
-
 char* strchr(const char* s, int c) {
     const char ch = c;
     while (*s != ch) {

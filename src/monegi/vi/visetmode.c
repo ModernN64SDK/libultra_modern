@@ -3,49 +3,6 @@
 #include "assert.h"
 #include "viint.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 void osViSetMode(OSViMode* modep) {
     register u32 saveMask;
 

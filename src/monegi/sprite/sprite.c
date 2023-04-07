@@ -21,9 +21,6 @@
 #include <assert.h>
 #include <sp.h>
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 /*
  * spSetZ()
  *

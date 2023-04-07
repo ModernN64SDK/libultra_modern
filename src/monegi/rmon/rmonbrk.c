@@ -8,9 +8,6 @@
 
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.4 $"
-
 static void rmonFindFaultedThreads(void);
 
 #define TMP_BP 0

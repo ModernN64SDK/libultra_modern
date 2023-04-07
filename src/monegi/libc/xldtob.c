@@ -2,11 +2,6 @@
 #include "string.h"
 #include "xstdio.h"
 
-// TODO: these come from headers
-#ident "$Revision: 1.23 $"
-#ident "$Revision: 1.34 $"
-#ident "$Revision: 1.5 $"
-
 #define BUFF_LEN 0x20
 
 static s16 _Ldunscale(s16* pex, _Pft* px);

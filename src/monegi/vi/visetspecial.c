@@ -3,9 +3,6 @@
 #include "PR/rcp.h"
 #include "viint.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 #define OS_VI_SPECIAL_MAX                                                                                 \
     (OS_VI_GAMMA_ON | OS_VI_GAMMA_OFF | OS_VI_GAMMA_DITHER_ON | OS_VI_GAMMA_DITHER_OFF | OS_VI_DIVOT_ON | \
      OS_VI_DIVOT_OFF | OS_VI_DITHER_FILTER_ON | OS_VI_DITHER_FILTER_OFF)

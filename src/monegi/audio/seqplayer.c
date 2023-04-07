@@ -40,10 +40,6 @@
 #include "seqp.h"
 #include "seq.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
-
 static  ALMicroTime     __seqpVoiceHandler(void *node);
 static  void            __handleMIDIMsg(ALSeqPlayer *seqp, ALEvent *event);
 static  void            __handleMetaMsg(ALSeqPlayer *seqp, ALEvent *event);

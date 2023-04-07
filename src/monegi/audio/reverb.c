@@ -24,9 +24,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "initfx.h"
-// TODO: these come from headers
-#ident "$Revision: 1.49 $"
-#ident "$Revision: 1.17 $"
+
 #define RANGE 2.0
 extern ALGlobals *alGlobals;
 

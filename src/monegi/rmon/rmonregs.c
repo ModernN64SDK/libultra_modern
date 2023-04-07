@@ -9,13 +9,6 @@
 
 #include "macros.h"
 
-// TODO: these come from headers
-#ident "$Revision: 1.4 $"
-#ident "$Revision: 3.70 $"
-#ident "$Revision: 1.5 $"
-#ident "$Revision: 1.2 $"
-#ident "$Revision: 1.4 $"
-
 static u32 RCPpc;
 static u32 oldIMEMvalue;
 static u32 DMEMbuffer[4] ALIGNED(8);

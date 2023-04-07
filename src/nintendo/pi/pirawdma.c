@@ -1,9 +1,6 @@
 #include "piint.h"
 #include "PR/ultraerror.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 s32 __osPiRawStartDma(s32 direction, u32 devAddr, void* dramAddr, u32 size) {
     register u32 stat;
 

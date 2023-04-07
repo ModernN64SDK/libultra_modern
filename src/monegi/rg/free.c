@@ -3,46 +3,6 @@
 #include "PR/ultraerror.h"
 #include "assert.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 void osFree(void* region, void* addr) {
     register OSRegion* rp = region;
     int i;

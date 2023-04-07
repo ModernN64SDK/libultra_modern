@@ -18,9 +18,6 @@
 #include "ultra64.h"
 #include "macros.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.49 $"
-
 #define TRAM_SIZE       4096    /* in bytes */
 #define TRAM_WSIZE      8       /* TRAM word size in bytes */
 #define TRAM_LSIZE      8       /* TRAM load word size in bytes */

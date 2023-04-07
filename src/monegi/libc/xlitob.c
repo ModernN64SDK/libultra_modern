@@ -2,11 +2,6 @@
 #include "string.h"
 #include "xstdio.h"
 
-// TODO: these come from headers
-#ident "$Revision: 1.34 $"
-#ident "$Revision: 1.5 $"
-#ident "$Revision: 1.23 $"
-
 #define BUFF_LEN 0x18
 
 static char ldigs[] = "0123456789abcdef";

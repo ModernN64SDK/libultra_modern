@@ -3,9 +3,6 @@
 #include "PR/ultralog.h"
 #include "viint.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 void osViSetYScale(f32 value) {
     register u32 saveMask;
 

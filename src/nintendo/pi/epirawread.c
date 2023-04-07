@@ -2,33 +2,6 @@
 #include "PR/ultraerror.h"
 #include "assert.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 s32 __osEPiRawReadIo(OSPiHandle* pihandle, u32 devAddr, u32* data) {
     register u32 stat;
     register u32 domain;

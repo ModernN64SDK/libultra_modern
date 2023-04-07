@@ -3,9 +3,6 @@
 #include "PR/rcp.h"
 #include "osint.h"
 
-// TODO: this comes from a header
-#ident "$Revision: 1.17 $"
-
 s32 osDpSetNextBuffer(void* bufPtr, u64 size) {
     register u32 stat;
 
