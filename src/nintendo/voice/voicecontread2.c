@@ -1,6 +1,7 @@
 #include "PR/os_internal.h"
 #include "controller.h"
 #include "PR/os_voice.h"
+#include "siint.h"
 #include "voiceinternal.h"
 #include "controller_voice.h"
 

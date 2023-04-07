@@ -1,6 +1,7 @@
 #include "PR/os_internal.h"
 #include "controller.h"
 #include "PR/os_voice.h"
+#include "voiceinternal.h"
 
 s32 __osVoiceCheckResult(OSVoiceHandle* hd, u8* stat) {
     s32 ret;
