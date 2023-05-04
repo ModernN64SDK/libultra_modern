@@ -20,7 +20,7 @@ COLOR ?= 1
 # VERSION 	   - selects the version of the library to build
 #   libultra	 - standard library
 #   libultra_d   - debug library
-#   libultra_rom - debug n_audio library
+ #   libultra_rom - final ROM library
 VERSION ?= libultra_rom
 $(eval $(call validate-option,VERSION,libultra libultra_d libultra_rom))
 
@@ -155,15 +155,23 @@ $(LIB): $(O_FILES)
 	@$(PRINT) "$(GREEN)Linking $(VERSION):  $(BLUE)$@ $(NO_COL)\n"
 	$(V)$(AR) rcs -o $@ $(O_FILES)
 
-all:
-	$(MAKE) VERSION=libultra
-	cp $(BUILD_DIR_BASE)/libultra/libultra.a $(BUILD_DIR_BASE)
-	$(MAKE) VERSION=libultra_d
-	cp $(BUILD_DIR_BASE)/libultra_d/libultra_d.a $(BUILD_DIR_BASE)
-	$(MAKE) VERSION=libultra_rom
-	cp $(BUILD_DIR_BASE)/libultra_rom/libultra_rom.a $(BUILD_DIR_BASE)
+all: $(BUILD_DIR_BASE)/libultra.a $(BUILD_DIR_BASE)/libultra_d.a $(BUILD_DIR_BASE)/libultra_rom.a
 
-.PHONY: clean default all
+$(BUILD_DIR_BASE)/libultra.a: 
+	$(V)$(MAKE) VERSION=libultra
+	$(V)cp $(BUILD_DIR_BASE)/libultra/libultra.a $(BUILD_DIR_BASE)
+
+$(BUILD_DIR_BASE)/libultra_d.a:
+	$(V)$(MAKE) VERSION=libultra_d
+	$(V)cp $(BUILD_DIR_BASE)/libultra_d/libultra_d.a $(BUILD_DIR_BASE)
+
+$(BUILD_DIR_BASE)/libultra_rom.a:
+	$(V)$(MAKE) VERSION=libultra_rom
+	$(V)cp $(BUILD_DIR_BASE)/libultra_rom/libultra_rom.a $(BUILD_DIR_BASE)
+
+include install.mk
+
+.PHONY: clean default all install pkginstall
 # with no prerequisites, .SECONDARY causes no intermediate target to be removed
 .SECONDARY:
 
