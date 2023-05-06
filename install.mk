@@ -1,7 +1,7 @@
 PRHFILES = include/PR/os_internal_error.h include/PR/os_internal_thread.h include/PR/rsp.h \
 		 include/PR/os_time.h include/PR/uportals.h include/PR/os_gio.h include/PR/ramrom.h include/PR/ucode_debug.h \
 		 include/PR/os_cache.h include/PR/os_cont.h include/PR/os_system.h include/PR/os_libc.h include/PR/os_pfs.h \
-		 include/PR/os_eeprom.h include/PR/sptask.h include/PR/gbi-poslight.h include/PR/R4300.h include/PR/PRimage.h \
+		 include/PR/os_eeprom.h include/PR/sptask.h include/PR/R4300.h include/PR/PRimage.h \
 		 include/PR/gu.h include/PR/gt.h include/PR/os_ai.h include/PR/abi.h include/PR/os_rdp.h include/PR/os_internal_rsp.h \
 		 include/PR/os_error.h include/PR/os_si.h include/PR/rsp_ipc.h include/PR/os_internal_reg.h include/PR/trace.h \
 		 include/PR/os_internal.h include/PR/os_message.h include/PR/os_internal_gio.h include/PR/os_motor.h \
