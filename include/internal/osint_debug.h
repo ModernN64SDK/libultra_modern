@@ -1,4 +1,5 @@
 #include "PR/os_internal.h"
+#include "PR/ultraerror.h"
 
 extern s32 __osThprofFlag;
 extern void (*__osThprofFunc)(OSThread*);
