@@ -20,18 +20,18 @@ COLOR ?= 1
 # VERSION 	   - selects the version of the library to build
 #   libultra	 - standard library
 #   libultra_d   - debug library
- #   libultra_rom - final ROM library
+#   libultra_rom - final ROM library
 VERSION ?= libultra_rom
 $(eval $(call validate-option,VERSION,libultra libultra_d libultra_rom))
 
 ifeq      ($(VERSION),libultra)
-	OPT_FLAGS := -Os
+	OPT_FLAGS := -Os -g -ggdb
 	DEFINES += NDEBUG=1
 else ifeq ($(VERSION),libultra_d)
 	OPT_FLAGS := -O0 -g -ggdb
 	DEFINES += _DEBUG=1
 else ifeq ($(VERSION),libultra_rom)
-	OPT_FLAGS := -Os
+	OPT_FLAGS := -Os -g -ggdb
 	DEFINES += NDEBUG=1
 	DEFINES += _FINALROM=1
 endif
