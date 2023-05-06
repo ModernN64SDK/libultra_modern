@@ -6,13 +6,13 @@ OSTime osThreadProfileReadTime(OSId id) {
 
 #ifndef NDEBUG
     if (!__osThprofFlag) {
-        __osError(140, 0);
+        __osError(ERR_OSTHPROFILEREADTIME_FLAG, 0);
         return 0;
     }
 #endif
     if (id >= THPROF_IDMAX) {
 #ifndef NDEBUG
-        __osError(144, 1, id);
+        __osError(ERR_OSTHPROFILEREADTIME_LAR, 1, id);
 #endif
         return 0;
     }
@@ -30,7 +30,7 @@ OSTime osThreadProfileReadTimeTh(OSThread* thread) {
 
 #ifndef NDEBUG
     if (!__osThprofFlag) {
-        __osError(142, 0);
+        __osError(ERR_OSTHPROFILEREADTIMETH_FLAG, 0);
         return 0;
     }
 #endif
@@ -39,7 +39,7 @@ OSTime osThreadProfileReadTimeTh(OSThread* thread) {
 
     if (id >= THPROF_IDMAX) {
 #ifndef NDEBUG
-        __osError(146, 1, id);
+        __osError(ERR_OSTHPROFILEREADTIMETH_LAR, 1, id);
 #endif
         return 0;
     }

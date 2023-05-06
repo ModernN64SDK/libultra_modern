@@ -5,11 +5,11 @@ void osThreadProfileStart(void) {
 
 #ifndef NDEBUG
     if (!__osThprofFlag) {
-        __osError(136, 0);
+        __osError(ERR_OSTHPROFILESTART_FLAG, 0);
         return;
     }
     if (__osThprofFunc != NULL) {
-        __osError(137, 0);
+        __osError(ERR_OSTHPROFILESTART_START, 0);
         return;
     }
 #endif

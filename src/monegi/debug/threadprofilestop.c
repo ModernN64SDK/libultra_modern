@@ -11,7 +11,7 @@ void osThreadProfileStop(void) {
 #ifndef NDEBUG
     if (__osThprofFlag == 0) {
         __osRestoreInt(saveMask);
-        __osError(138, 0);
+        __osError(ERR_OSTHPROFILESTOP_FLAG, 0);
         return;
     }
 #endif
@@ -24,7 +24,7 @@ void osThreadProfileStop(void) {
         } else {
 #ifndef NDEBUG
             __osRestoreInt(saveMask);
-            __osError(147, 1, id);
+            __osError(ERR_OSTHPROFILESTOP_LAR, 1, id);
             saveMask = __osDisableInt();
 #endif
         }

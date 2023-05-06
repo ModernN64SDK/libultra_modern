@@ -3,14 +3,14 @@
 u32 osThreadProfileReadCount(OSId id) {
 #ifndef NDEBUG
     if (!__osThprofFlag) {
-        __osError(139, 0);
+        __osError(ERR_OSTHPROFILEREADCOUNT_FLAG, 0);
         return 0;
     }
 #endif
 
     if (id >= THPROF_IDMAX) {
 #ifndef NDEBUG
-        __osError(143, 1, id);
+        __osError(ERR_OSTHPROFILEREADCOUNT_LAR, 1, id);
 #endif
         return 0;
     }
@@ -22,7 +22,7 @@ u32 osThreadProfileReadCountTh(OSThread* thread) {
 
 #ifndef NDEBUG
     if (!__osThprofFlag) {
-        __osError(141, 0);
+        __osError(ERR_OSTHPROFILEREADCOUNTTH_FLAG, 0);
         return 0;
     }
 #endif
@@ -31,7 +31,7 @@ u32 osThreadProfileReadCountTh(OSThread* thread) {
 
     if (id >= THPROF_IDMAX) {
 #ifndef NDEBUG
-        __osError(145, 1, id);
+        __osError(ERR_OSTHPROFILEREADCOUNTTH_LAR, 1, id);
 #endif
         return 0;
     }
