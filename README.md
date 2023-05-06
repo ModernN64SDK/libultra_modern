@@ -1,6 +1,6 @@
 # libultra_modern
 
-This repo contains a decompilation of libultra version 2.0L (GCC). It is intended to facilitate updating of libultra and allow the Modern SDK to be a complete open book for people to edit as they see fit.
+This repo contains a decompilation of libultra version 2.0L. It is intended to facilitate updating of libultra and allow the Modern SDK to be a complete open book for people to edit as they see fit.
 
 ## Build dependencies
 

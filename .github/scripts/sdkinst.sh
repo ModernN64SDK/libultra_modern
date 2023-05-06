@@ -1,5 +1,5 @@
 # Variables and PATH
-echo "N64_LIBGCCDIR=/opt/crashsdk/lib/gcc/mips64-elf/11.2.0" >> $GITHUB_ENV
+echo "N64_LIBGCCDIR=/opt/crashsdk/lib/gcc/mips64-elf/12.2.0" >> $GITHUB_ENV
 echo "ROOT=/etc/n64" >> $GITHUB_ENV
 echo "/opt/crashsdk/bin" >> $GITHUB_PATH
 
