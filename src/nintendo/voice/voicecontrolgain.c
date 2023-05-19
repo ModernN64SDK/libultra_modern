@@ -1,8 +1,8 @@
 #include "PR/os_internal.h"
 #include "controller.h"
 #include "PR/os_voice.h"
-
-s32 __osVoiceSetADConverter(OSMesgQueue*, int ch, u8 cmd);
+#include "voiceinternal.h"
+#include "siint.h"
 
 s32 osVoiceControlGain(OSVoiceHandle* hd, s32 analog, s32 digital) {
     s32 ret;

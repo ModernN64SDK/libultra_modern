@@ -1,6 +1,8 @@
 #include "PR/os_internal.h"
 #include "controller.h"
 #include "PR/os_voice.h"
+#include "voiceinternal.h"
+#include "siint.h"
 
 s32 osVoiceClearDictionary(OSVoiceHandle* hd, u8 words) {
     s32 ret;

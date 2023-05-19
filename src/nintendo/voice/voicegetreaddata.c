@@ -2,6 +2,7 @@
 #include "controller.h"
 #include "PR/os_voice.h"
 #include "voiceinternal.h"
+#include "siint.h"
 
 s32 osVoiceGetReadData(OSVoiceHandle* hd, OSVoiceData* micdata) {
     s32 ret = 0;

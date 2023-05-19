@@ -2,6 +2,7 @@
 #include "controller.h"
 #include "PR/os_voice.h"
 #include "voiceinternal.h"
+#include "siint.h"
 
 s32 osVoiceStopReadData(OSVoiceHandle* hd) {
     s32 ret;

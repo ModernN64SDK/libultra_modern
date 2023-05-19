@@ -2,6 +2,7 @@
 #include "controller.h"
 #include "PR/os_voice.h"
 #include "voiceinternal.h"
+#include "siint.h"
 #include "controller_voice.h"
 
 #define SWRITEFORMAT(p) ((__OSVoiceSWriteFormat*)(p))
