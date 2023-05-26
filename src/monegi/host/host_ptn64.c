@@ -1,3 +1,4 @@
+#ifndef _FINALROM
 #include "PR/os_internal.h"
 #include "PR/rcp.h"
 #include "piint.h"
@@ -201,3 +202,4 @@ osWriteHost_ret:
     __osPiRelAccess();
     return;
 }
+#endif

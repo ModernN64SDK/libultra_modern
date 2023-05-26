@@ -6,10 +6,9 @@
 #include "macros.h"
 #include "stdarg.h"
 
-#ifndef _FINALROM
+#ifndef NDEBUG
 
-static u32 errorLogData[19] ALIGNED(8);
-static OSLog errorLog = { OS_ERROR_MAGIC, 76, errorLogData, 0, 0 };
+extern void __osSyncVPrintf(const char* fmt, va_list args);
 
 static void __commonErrorHandler(s16 code, s16 numArgs, ...);
 OSErrorHandler __osCommonHandler = __commonErrorHandler;

@@ -1,3 +1,4 @@
+#ifndef _FINALROM
 #include "PR/os_internal.h"
 #include "piint.h"
 
@@ -6,3 +7,4 @@ void __osGIOInterrupt(s32 value) {
     __osGIORawInterrupt(value);
     __osPiRelAccess();
 }
+#endif

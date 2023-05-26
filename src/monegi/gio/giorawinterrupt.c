@@ -1,3 +1,4 @@
+#ifndef _FINALROM
 #include "PR/os_internal.h"
 #include "PR/rcp.h"
 #include "piint.h"
@@ -11,3 +12,4 @@ void __osGIORawInterrupt(s32 value) {
 
     WAIT_ON_IOBUSY(stat);
 }
+#endif

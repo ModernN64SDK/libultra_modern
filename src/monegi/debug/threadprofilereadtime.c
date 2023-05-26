@@ -1,3 +1,4 @@
+#ifndef _FINALROM
 #include "osint_debug.h"
 
 OSTime osThreadProfileReadTime(OSId id) {
@@ -49,3 +50,4 @@ OSTime osThreadProfileReadTimeTh(OSThread* thread) {
     }
     return thprof[id].time + adjust;
 }
+#endif

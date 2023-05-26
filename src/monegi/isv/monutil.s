@@ -5,47 +5,6 @@
 #include "sgidefs.h"
 #include "PR/R4300.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #define EXC(code) (EXC_##code >> CAUSE_EXCSHIFT)
 
 .text
@@ -140,14 +99,6 @@ non_resv:
 throw_os_exception:
     j       ramOldVector
      nop
-
-
-
-
-
-
-
-
 
 go_monitor:
     move    k0, sp
