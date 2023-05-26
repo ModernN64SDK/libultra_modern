@@ -37,7 +37,7 @@ void __createSpeedParam(void) {
     __Dom2SpeedParam.relDuration = IO_READ(PI_BSD_DOM2_RLS_REG);
 }
 
-void __osInitialize_common() {
+void osInitialize() {
     u32 pifdata;
 
 #ifdef _FINALROM
@@ -89,16 +89,17 @@ void __osInitialize_common() {
     IO_WRITE(AI_BITRATE_REG, AI_MAX_BIT_RATE - 1);
 }
 
-void __osInitialize_autodetect() {
+extern u32 gISVDbgPrnAdrs;
+extern u32 gISVFlag;
+extern int __checkHardware_isv(void);
+extern void __osInitialize_isv(void);
+
+void osInitialize_isv(){
 #ifndef _FINALROM
-    if (__checkHardware_msp()) {
-        __osInitialize_msp();
-    } else if (__checkHardware_kmc()) {
-        __osInitialize_kmc();
-    } else if (__checkHardware_isv()) {
+    if (__checkHardware_isv()) {
+        gISVDbgPrnAdrs = 0xB3FF0000;
+        gISVFlag = 0x49533634;  // 'IS64'
         __osInitialize_isv();
-    } else {
-        __osInitialize_emu();
     }
 #endif
 }

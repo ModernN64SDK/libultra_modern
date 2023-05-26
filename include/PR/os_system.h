@@ -102,6 +102,7 @@ extern OSIntMask __OSGlobalIntMask;	/* global interrupt mask */
  */
 
 extern void		osInitialize(void);
+extern void             osInitialize_isv();
 extern void		osExit(void);
 extern u32 		osGetMemSize(void);
 
