@@ -104,8 +104,19 @@ static void* is_proutSyncPrintf(void* arg, const u8* str, u32 count) {
 #define ISVIEWER_BUFFER ((volatile u32 *)0xB3FF0020)
 
 int __checkHardware_isv(void) {
-	ISVIEWER_BUFFER[0] = 0x12345678;
-	return ISVIEWER_BUFFER[0] == 0x12345678;
+    u32 data = 0x12345678;
+    u32 buffer;
+    OSPiHandle* hnd = osCartRomInit();
+
+    osEPiWriteIo(hnd, 0xB3FF0020, data);
+
+    osEPiReadIo(hnd, 0xB3FF0020, &buffer);
+
+    if (buffer != data){
+        return FALSE;
+    } else {
+        return TRUE;
+    }
 }
 
 void __osInitialize_isv(void) {
