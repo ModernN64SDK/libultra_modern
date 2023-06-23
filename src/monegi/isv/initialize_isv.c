@@ -100,9 +100,6 @@ static void* is_proutSyncPrintf(void* arg, const u8* str, u32 count) {
     return 1;
 }
 
-/* ISViewer buffer */
-#define ISVIEWER_BUFFER ((volatile u32 *)0xB3FF0020)
-
 int __checkHardware_isv(void) {
     u32 data = 0x12345678;
     u32 buffer;
