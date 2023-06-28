@@ -1,3 +1,4 @@
+#ifndef _FINALROM
 #include "osint_debug.h"
 
 void osThreadProfileInit(void) {
@@ -14,3 +15,4 @@ void osThreadProfileInit(void) {
         osThreadProfileClear(i);
     }
 }
+#endif

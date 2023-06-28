@@ -2,6 +2,8 @@
 
 #include "macros.h"
 
+#ifndef _FINALROM
+
 s32 __osThprofFlag = 0;
 void (*__osThprofFunc)(OSThread*) = NULL;
 
@@ -20,3 +22,5 @@ void osThreadProfileCallback(OSThread* osthread) {
     __osThprofCount++;
     __osThprofLastTimer = now_time;
 }
+
+#endif

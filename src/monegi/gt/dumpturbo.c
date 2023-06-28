@@ -15,6 +15,7 @@
  * Interpret & dump a turbo display list for RSPSIM debugging
  *
  */
+#ifndef _FINALROM
 
 #include <ultra64.h>
 #include <gt.h>
@@ -254,3 +255,4 @@ gtDumpTurbo(OSTask *tp,u8 flags)
  */
 	
 }
+#endif

@@ -26,7 +26,7 @@ typedef struct {
     /* 0x20 */ u8 data[0x10000 - 0x20];
 } ISVDbg;
 
-#define IS64_MAGIC 'IS64'
+#define IS64_MAGIC  0x49533634  // 'IS64'
 
 ISVDbg* gISVDbgPrnAdrs;
 
@@ -101,47 +101,19 @@ static void* is_proutSyncPrintf(void* arg, const u8* str, u32 count) {
 }
 
 int __checkHardware_isv(void) {
-    u32 i = 0;
-    u32 data; // BUG: data is used uninitialized
-    u32 save[4];
-    u32 addr;
+    u32 data = 0x12345678;
+    u32 buffer;
     OSPiHandle* hnd = osCartRomInit();
 
-    gISVDbgPrnAdrs = NULL;
-    leoComuBuffAdd = 0;
-    gISVFlag = IS64_MAGIC;
-    gISVChk = 0;
+    osEPiWriteIo(hnd, 0xB3FF0020, data);
 
-    for (i = 0; i < 4; i++) {
-        osEPiReadIo(hnd, 0xB0000100 + i * 4, save + i);
+    osEPiReadIo(hnd, 0xB3FF0020, &buffer);
+
+    if (buffer != data){
+        return FALSE;
+    } else {
+        return TRUE;
     }
-
-    // data = 0;
-    osEPiWriteIo(hnd, 0xB000010C, data);
-    data = IS64_MAGIC;
-    osEPiWriteIo(hnd, 0xB0000100, IS64_MAGIC);
-
-    for (i = 0; i <= 0x1FFFF; i++) {
-        osEPiReadIo(hnd, 0xB000010C, &data);
-        if (data == IS64_MAGIC) {
-            data = 0;
-            osEPiWriteIo(hnd, 0xB0000100, data);
-            gISVChk |= 1;
-            osEPiReadIo(hnd, 0xB0000104, (void*)&gISVDbgPrnAdrs);
-            osEPiReadIo(hnd, 0xB0000108, &leoComuBuffAdd);
-            break;
-        }
-    }
-
-    for (i = 0; i < 4; i++) {
-        osEPiWriteIo(hnd, 0xB0000100 + i * 4, save[i]);
-    }
-
-    osEPiReadIo(hnd, 0xBFF00000, &data);
-
-    gISVChk |= ((data == IS64_MAGIC) ? 2 : 0);
-
-    return (gISVChk != 0) ? TRUE : FALSE;
 }
 
 void __osInitialize_isv(void) {

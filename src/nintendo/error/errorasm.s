@@ -1,4 +1,4 @@
-#ifndef _FINALROM
+#ifndef NDEBUG
 #include "sys/asm.h"
 #include "sys/regdef.h"
 

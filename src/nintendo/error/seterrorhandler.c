@@ -1,3 +1,4 @@
+#ifndef NDEBUG
 #include "PR/ultraerror.h"
 
 extern OSErrorHandler __osErrorHandler;
@@ -8,3 +9,4 @@ OSErrorHandler osSetErrorHandler(OSErrorHandler handler) {
     __osErrorHandler = handler;
     return oldHandler;
 }
+#endif

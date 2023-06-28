@@ -1,5 +1,7 @@
 #include "osint_debug.h"
 
+#ifndef _FINALROM
+
 void osThreadProfileClear(OSId id) {
     register OSIntMask saveMask = __osDisableInt();
 
@@ -9,3 +11,5 @@ void osThreadProfileClear(OSId id) {
 
     __osRestoreInt(saveMask);
 }
+
+#endif
